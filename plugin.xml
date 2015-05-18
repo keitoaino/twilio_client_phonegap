@@ -35,8 +35,8 @@
          <source-file src="src/android/com/phonegap/plugins/twilioclient/TCPlugin.java"
                 target-dir="src/com/phonegap/plugins/twilioclient" />
         <info>
-This plugin also uses the Android Support Library V4. You only need one copy of this library (a JAR file) in your libs directory. See http://developer.android.com/tools/support-library/index.html for information about how to download this library to your computer. Then copy android-support-v4.jar to your libs folder.        
-        
+This plugin also uses the Android Support Library V4. You only need one copy of this library (a JAR file) in your libs directory. See http://developer.android.com/tools/support-library/index.html for information about how to download this library to your computer. Then copy android-support-v4.jar to your libs folder.
+
 You need to download __Twilio Client for Android__ from https://www.twilio.com/docs/client/android. Uncompress the download - you will need to follow one step that plugman can not do yet:
 
 * Add the Twilio Client Java libraries (everything in the libs folder) to your project's libs folder - (platforms/android/libs)
@@ -45,38 +45,39 @@ You need to download __Twilio Client for Android__ from https://www.twilio.com/d
     </platform>
 
     <!-- ios -->
-    <platform name="ios">
+
+    <!-- <platform name="ios"> -->
         <!-- Add the Twilio Client plugin to the iOS app's config.xml -->
-        <config-file target="config.xml" parent="widget">
-          <feature name="TCPlugin">
-            <param name="ios-package"
-                value="TCPlugin"/>
-          </feature>
-        </config-file>
+        <!-- <config-file target="config.xml" parent="widget"> -->
+          <!-- <feature name="TCPlugin"> -->
+            <!-- <param name="ios-package" -->
+                <!-- value="TCPlugin"/> -->
+          <!-- </feature> -->
+        <!-- </config-file> -->
 
         <!-- Add support for background VOIP and audio to the plist -->
-        <config-file target="*-Info.plist" parent="UIBackgroundModes">
-            <array>
-                <string>voip</string>
-                <string>audio</string>
-            </array>
-        </config-file>
-        
+        <!-- <config-file target="*-Info.plist" parent="UIBackgroundModes"> -->
+            <!-- <array> -->
+                <!-- <string>voip</string> -->
+                <!-- <string>audio</string> -->
+            <!-- </array> -->
+        <!-- </config-file> -->
 
-        <framework src="AudioToolbox.framework" />
-        <framework src="AVFoundation.framework" />
-        <framework src="CFNetwork.framework" />
-        <framework src="SystemConfiguration.framework" />
 
-        <header-file src="src/ios/TCPlugin.h" />
-        <source-file src="src/ios/TCPlugin.m" />
+        <!-- <framework src="AudioToolbox.framework" /> -->
+        <!-- <framework src="AVFoundation.framework" /> -->
+        <!-- <framework src="CFNetwork.framework" /> -->
+        <!-- <framework src="SystemConfiguration.framework" /> -->
 
-        <info>
-You need to download __Twilio Client for iOS__ from https://www.twilio.com/docs/client/ios. Uncompress the download - you will need to follow a few steps that plugman can not do yet:
+        <!-- <header-file src="src/ios/TCPlugin.h" /> -->
+        <!-- <source-file src="src/ios/TCPlugin.m" /> -->
 
-* Add the Twilio Client static libraries (the .a files in the Libraries folder) to your Xcode project
+        <!-- <info> -->
+<!-- You need to download __Twilio Client for iOS__ from https://www.twilio.com/docs/client/ios. Uncompress the download - you will need to follow a few steps that plugman can not do yet: -->
 
-* Add the Twilio Client headers files (the .h files in the Headers folder) to your Xcode project
-        </info>
-    </platform>
+<!-- * Add the Twilio Client static libraries (the .a files in the Libraries folder) to your Xcode project -->
+
+<!-- * Add the Twilio Client headers files (the .h files in the Headers folder) to your Xcode project -->
+        <!-- </info> -->
+    <!-- </platform> -->
 </plugin>
